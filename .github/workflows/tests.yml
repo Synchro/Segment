@@ -11,11 +11,8 @@ jobs:
 
     strategy:
       matrix:
-        php: ['7.4', '8.0']
-        laravel: ['6', '7', '8']
-        exclude:
-          - php: '7.2'
-            laravel: '8'
+        php: ['7.4', '8.0', '8.1']
+        laravel: ['8', '9']
 
     steps:
       - name: Checkout Code
@@ -31,54 +28,6 @@ jobs:
       - name: Setup Problem Matchers
         run: echo "::add-matcher::${{ runner.tool_cache }}/phpunit.json"
 
-      - name: Select Laravel 5.5
-        uses: nick-invision/retry@v1
-        with:
-          timeout_minutes: 5
-          max_attempts: 5
-          command: composer require "laravel/framework:5.5.*" "phpunit/phpunit:^6.5" --no-update --no-interaction
-        if: "matrix.laravel == '5.5'"
-
-      - name: Select Laravel 5.6
-        uses: nick-invision/retry@v1
-        with:
-          timeout_minutes: 5
-          max_attempts: 5
-          command: composer require "laravel/framework:5.6.*" "phpunit/phpunit:^7.5" --no-update --no-interaction
-        if: "matrix.laravel == '5.6'"
-
-      - name: Select Laravel 5.7
-        uses: nick-invision/retry@v1
-        with:
-          timeout_minutes: 5
-          max_attempts: 5
-          command: composer require "laravel/framework:5.7.*" "phpunit/phpunit:^7.5" --no-update --no-interaction
-        if: "matrix.laravel == '5.7'"
-
-      - name: Select Laravel 5.8
-        uses: nick-invision/retry@v1
-        with:
-          timeout_minutes: 5
-          max_attempts: 5
-          command: composer require "laravel/framework:5.8.*" "phpunit/phpunit:^7.5|^8.5" --no-update --no-interaction
-        if: "matrix.laravel == '5.8'"
-
-      - name: Select Laravel 6
-        uses: nick-invision/retry@v1
-        with:
-          timeout_minutes: 5
-          max_attempts: 5
-          command: composer require "laravel/framework:6.*" "phpunit/phpunit:^8.5|^9.0" --no-update --no-interaction
-        if: "matrix.laravel == '6'"
-
-      - name: Select Laravel 7
-        uses: nick-invision/retry@v1
-        with:
-          timeout_minutes: 5
-          max_attempts: 5
-          command: composer require "laravel/framework:7.*" "phpunit/phpunit:^8.5|^9.0" --no-update --no-interaction
-        if: "matrix.laravel == '7'"
-
       - name: Select Laravel 8
         uses: nick-invision/retry@v1
         with:
@@ -86,6 +35,14 @@ jobs:
           max_attempts: 5
           command: composer require "laravel/framework:8.*" "phpunit/phpunit:^9.3" --no-update --no-interaction
         if: "matrix.laravel == '8'"
+
+      - name: Select Laravel 9
+        uses: nick-invision/retry@v1
+        with:
+          timeout_minutes: 5
+          max_attempts: 5
+          command: composer require "laravel/framework:9.*" "phpunit/phpunit:^9.3" --no-update --no-interaction
+        if: "matrix.laravel == '9'"
 
       - name: Install Dependencies
         uses: nick-invision/retry@v1
