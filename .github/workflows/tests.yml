@@ -11,12 +11,12 @@ jobs:
 
     strategy:
       matrix:
-        php: ['7.4', '8.0', '8.1']
+        php: ['8.0', '8.1']
         laravel: ['8', '9']
 
     steps:
       - name: Checkout Code
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
 
       - name: Setup PHP
         uses: shivammathur/setup-php@v2
@@ -29,7 +29,7 @@ jobs:
         run: echo "::add-matcher::${{ runner.tool_cache }}/phpunit.json"
 
       - name: Select Laravel 8
-        uses: nick-invision/retry@v1
+        uses: nick-invision/retry@v2
         with:
           timeout_minutes: 5
           max_attempts: 5
@@ -37,7 +37,7 @@ jobs:
         if: "matrix.laravel == '8'"
 
       - name: Select Laravel 9
-        uses: nick-invision/retry@v1
+        uses: nick-invision/retry@v2
         with:
           timeout_minutes: 5
           max_attempts: 5
@@ -45,7 +45,7 @@ jobs:
         if: "matrix.laravel == '9'"
 
       - name: Install Dependencies
-        uses: nick-invision/retry@v1
+        uses: nick-invision/retry@v2
         with:
           timeout_minutes: 5
           max_attempts: 5
