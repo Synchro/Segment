@@ -21,12 +21,13 @@ use GrahamCampbell\TestBenchCore\ServiceProviderTrait;
  * This is the service provider test class.
  *
  * @author Graham Campbell <graham@alt-three.com>
+ * @return string
  */
 class ServiceProviderTest extends AbstractPackageTestCase
 {
     use ServiceProviderTrait;
 
-    protected function getServiceProviderClass($app)
+    protected function getServiceProviderClass()
     {
         return SegmentServiceProvider::class;
     }
