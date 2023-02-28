@@ -1,45 +1,58 @@
 {
-    "name": "alt-three/segment",
-    "description": "A Segment bridge for Laravel",
-    "keywords": ["segment", "bridge", "segment.com", "segment.io", "api", "Alt Three"],
-    "license": "MIT",
-    "authors": [
-        {
-            "name": "Alt Three",
-            "email": "support@alt-three.com"
-        }
-    ],
-    "require": {
-        "php": "^8.1",
-        "illuminate/config": "^9.0 || ^10.0",
-        "illuminate/support": "^9.0 || ^10.0",
-        "segmentio/analytics-php": "~2.0.0"
-    },
-    "require-dev": {
-        "graham-campbell/analyzer": "^4.0",
-        "graham-campbell/testbench": "^6.0",
-        "phpunit/phpunit": "^9.0 || ^10.0"
-    },
-    "autoload": {
-        "psr-4": {
-            "AltThree\\Segment\\": "src/"
-        }
-    },
-    "autoload-dev": {
-        "psr-4": {
-            "AltThree\\Tests\\Segment\\": "tests/"
-        }
-    },
-    "config": {
-        "preferred-install": "dist"
-    },
-    "extra": {
-        "laravel": {
-            "providers": [
-                "AltThree\\Segment\\SegmentServiceProvider"
-            ]
-        }
-    },
-    "minimum-stability": "dev",
-    "prefer-stable": true
+  "name": "alt-three/segment",
+  "description": "A Segment bridge for Laravel",
+  "keywords": [
+    "segment",
+    "bridge",
+    "segment.com",
+    "segment.io",
+    "api",
+    "Alt Three"
+  ],
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Alt Three",
+      "email": "support@alt-three.com"
+    }
+  ],
+  "require": {
+    "php": "^8.1",
+    "illuminate/config": "^9.0 || ^10.0",
+    "illuminate/support": "^9.0 || ^10.0",
+    "segmentio/analytics-php": "dev-Issue-%23210-testing"
+  },
+  "require-dev": {
+    "graham-campbell/analyzer": "^4.0",
+    "graham-campbell/testbench": "^6.0",
+    "phpunit/phpunit": "^9.0 || ^10.0"
+  },
+  "repositories": [
+    {
+      "type": "vcs",
+      "url": "https://github.com/North-Two-Five/analytics-php"
+    }
+  ],
+  "autoload": {
+    "psr-4": {
+      "AltThree\\Segment\\": "src/"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "AltThree\\Tests\\Segment\\": "tests/"
+    }
+  },
+  "config": {
+    "preferred-install": "dist"
+  },
+  "extra": {
+    "laravel": {
+      "providers": [
+        "AltThree\\Segment\\SegmentServiceProvider"
+      ]
+    }
+  },
+  "minimum-stability": "dev",
+  "prefer-stable": true
 }
