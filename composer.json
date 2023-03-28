@@ -20,19 +20,13 @@
     "php": "^8.1",
     "illuminate/config": "^9.0 || ^10.0",
     "illuminate/support": "^9.0 || ^10.0",
-    "segmentio/analytics-php": "dev-Issue-%23210-testing"
+    "segmentio/analytics-php": "^3.6.0"
   },
   "require-dev": {
     "graham-campbell/analyzer": "^4.0",
     "graham-campbell/testbench": "^6.0",
     "phpunit/phpunit": "^9.0 || ^10.0"
   },
-  "repositories": [
-    {
-      "type": "vcs",
-      "url": "https://github.com/North-Two-Five/analytics-php"
-    }
-  ],
   "autoload": {
     "psr-4": {
       "AltThree\\Segment\\": "src/"
