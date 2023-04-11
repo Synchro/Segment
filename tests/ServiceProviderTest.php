@@ -26,7 +26,7 @@ class ServiceProviderTest extends AbstractPackageTestCase
 {
     use ServiceProviderTrait;
 
-    protected function getServiceProviderClass()
+    protected static function getServiceProviderClass(): string
     {
         return SegmentServiceProvider::class;
     }
