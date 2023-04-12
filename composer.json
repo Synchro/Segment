@@ -1,5 +1,5 @@
 {
-  "name": "alt-three/segment",
+  "name": "synchro/segment",
   "description": "A Segment bridge for Laravel",
   "keywords": [
     "segment",
@@ -7,10 +7,15 @@
     "segment.com",
     "segment.io",
     "api",
-    "Alt Three"
+    "laravel",
+    "php"
   ],
   "license": "MIT",
   "authors": [
+    {
+      "name": "Marcus Bointon",
+      "email": "github@devalps.eu"
+    },
     {
       "name": "Alt Three",
       "email": "support@alt-three.com"
