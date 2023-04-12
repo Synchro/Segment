@@ -1,7 +1,7 @@
 <p align="center">
-<a href="https://github.com/Synchro/Segment/actions?query=workflow%3ATests"><img src="https://img.shields.io/github/workflow/status/Synchro/Segment/Tests?label=Tests&style=flat-square" alt="Build Status"/></a>
+<a href="https://github.com/Synchro/Segment/actions?query=workflow%3ATests"><img src="https://img.shields.io/github/actions/workflow/status/Synchro/Segment/workflows/tests.yml?branch=main?style=flat-square" alt="Build Status"/></a>
 <a href="https://packagist.org/packages/synchro/segment"><img src="https://img.shields.io/packagist/dt/synchro/segment?style=flat-square" alt="Packagist Downloads"/></a>
-<a href="https://github.com/Synchro/Segment/releases"><img src="https://img.shields.io/github/release/Synchro/Segment?style=flat-square" alt="Latest Version"/></a>
+<a href="https://github.com/Synchro/Segment/releases"><img src="https://img.shields.io/github/v/release/Synchro/Segment?display_name=tag&style=flat-square" alt="Latest Version"/></a>
 </p>
 
 This package is a [Segment](https://segment.com/) bridge for Laravel, which relies
