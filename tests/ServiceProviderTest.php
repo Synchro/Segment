@@ -13,9 +13,9 @@ declare(strict_types=1);
 
 namespace Synchro\Segment\Tests;
 
-use AltThree\Segment\SegmentServiceProvider;
 use GrahamCampbell\TestBench\AbstractPackageTestCase;
 use GrahamCampbell\TestBenchCore\ServiceProviderTrait;
+use Synchro\Segment\SegmentServiceProvider;
 
 /**
  * This is the service provider test class.
