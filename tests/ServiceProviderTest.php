@@ -11,7 +11,7 @@ declare(strict_types=1);
  * file that was distributed with this source code.
  */
 
-namespace AltThree\Tests\Segment;
+namespace Synchro\Segment\Tests;
 
 use AltThree\Segment\SegmentServiceProvider;
 use GrahamCampbell\TestBench\AbstractPackageTestCase;

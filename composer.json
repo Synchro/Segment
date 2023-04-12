@@ -34,7 +34,7 @@
   },
   "autoload-dev": {
     "psr-4": {
-      "AltThree\\Tests\\Segment\\": "tests/"
+      "Synchro\\Segment\\Tests\\": "tests/"
     }
   },
   "config": {
