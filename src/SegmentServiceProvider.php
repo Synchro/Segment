@@ -25,12 +25,7 @@ use Segment\Segment;
  */
 class SegmentServiceProvider extends ServiceProvider
 {
-    /**
-     * Boot the service provider.
-     *
-     * @return void
-     */
-    public function boot()
+    public function boot(): void
     {
         $this->setupConfig();
 
@@ -40,14 +35,9 @@ class SegmentServiceProvider extends ServiceProvider
         }
     }
 
-    /**
-     * Setup the config.
-     *
-     * @return void
-     */
-    protected function setupConfig()
+    protected function setupConfig(): void
     {
-        $source = realpath($raw = __DIR__.'/../config/segment.php') ?: $raw;
+        $source = realpath($raw = __DIR__ . '/../config/segment.php') ?: $raw;
 
         if ($this->app instanceof LaravelApplication && $this->app->runningInConsole()) {
             $this->publishes([$source => config_path('segment.php')]);
@@ -58,12 +48,7 @@ class SegmentServiceProvider extends ServiceProvider
         $this->mergeConfigFrom($source, 'segment');
     }
 
-    /**
-     * Setup the queue.
-     *
-     * @return void
-     */
-    protected function setupQueue()
+    protected function setupQueue(): void
     {
         if ($this->app->runningInConsole()) {
             $this->app->queue->looping(function () {
