@@ -30,7 +30,8 @@
   "require-dev": {
     "graham-campbell/analyzer": "^4.0",
     "graham-campbell/testbench": "^6.0",
-    "phpunit/phpunit": "^9.0 || ^10.0"
+    "phpunit/phpunit": "^9.0 || ^10.0",
+    "tightenco/duster": "^1.2"
   },
   "replace": {
     "alt-three/segment": "^3.5.0"
@@ -56,5 +57,13 @@
     }
   },
   "minimum-stability": "dev",
-  "prefer-stable": true
+  "prefer-stable": true,
+  "scripts": {
+    "cs": [
+      "./vendor/bin/duster fix"
+    ],
+    "test": [
+      "./vendor/bin/phpunit"
+    ]
+  }
 }
