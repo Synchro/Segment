@@ -1,28 +1,22 @@
-![Alt Three Segment](https://user-images.githubusercontent.com/2829600/71490849-0de16e00-2825-11ea-87a6-ddada0f35224.png)
-
 <p align="center">
-<a href="https://github.com/AltThree/Segment/actions?query=workflow%3ATests"><img src="https://img.shields.io/github/workflow/status/AltThree/Segment/Tests?label=Tests&style=flat-square" alt="Build Status"></img></a>
-<a href="https://github.styleci.io/repos/38056197"><img src="https://github.styleci.io/repos/38056197/shield" alt="StyleCI Status"></img></a>
-<a href="LICENSE"><img src="https://img.shields.io/badge/license-MIT-brightgreen?style=flat-square" alt="Software License"></img></a>
-<a href="https://packagist.org/packages/alt-three/segment"><img src="https://img.shields.io/packagist/dt/alt-three/segment?style=flat-square" alt="Packagist Downloads"></img></a>
-<a href="https://github.com/AltThree/Segment/releases"><img src="https://img.shields.io/github/release/AltThree/Segment?style=flat-square" alt="Latest Version"></img></a>
+<a href="https://github.com/Synchro/Segment/actions?query=workflow%3ATests"><img src="https://img.shields.io/github/workflow/status/Synchro/Segment/Tests?label=Tests&style=flat-square" alt="Build Status"></img></a>
+<a href="https://packagist.org/packages/synchro/segment"><img src="https://img.shields.io/packagist/dt/synchro/segment?style=flat-square" alt="Packagist Downloads"></img></a>
+<a href="https://github.com/Synchro/Segment/releases"><img src="https://img.shields.io/github/release/Synchro/Segment?style=flat-square" alt="Latest Version"></img></a>
 </p>
-
 
 ## Installation
 
-Alt Three Segment is a [Segment](https://segment.com/) bridge for Laravel. This version requires [PHP](https://php.net) 7.1-7.4, and supports Laravel 5.5-8. Simply require the package using [Composer](https://getcomposer.org):
+This package is a [Segment](https://segment.com/) bridge for Laravel, which relies on [Segment's own PHP library](https://packagist.org/packages/segmentio/analytics-php). This version requires [PHP](https://php.net) 8.1 and up, and supports Laravel 9 – 10. Simply require the package using [Composer](https://getcomposer.org):
 
 ```bash
-$ composer require alt-three/segment:^3.5
+$ composer require synchro/segment:^4.0
 ```
 
-Once installed, if you are not using automatic package discovery, then you need to register the  `AltThree\Segment\SegmentServiceProvider` service provider in your `config/app.php`.
-
+Once installed, if you are not using automatic package discovery, then you need to register the  `Synchro\Segment\SegmentServiceProvider` service provider in your `config/app.php`.
 
 ## Configuration
 
-Alt Three Segment requires configuration.
+Segment requires configuration.
 
 To get started, you'll need to publish all vendor assets:
 
@@ -32,10 +26,9 @@ $ php artisan vendor:publish
 
 This will create a `config/segment.php` file in your app that you can modify to set your configuration. Also, make sure you check for changes to the original config file in this package between releases.
 
-
 ## Usage
 
-Once you've set your `write_key` value in the configuration, you're ready to go! For the most part you can follow [Segments own instructions](https://segment.com/docs/libraries/php/quickstart) however, you'll want to replace the `Analytics` classname with `Segment` - plus, you don't need to call `class_alias`.
+Once you've set your `write_key` value in the configuration, you're ready to go! For the most part you can follow [Segment's own instructions](https://segment.com/docs/libraries/php/quickstart) however, you'll want to replace the `Analytics` classname with `Segment` - plus, you don't need to call `class_alias`.
 
 ### Identify the user
 
@@ -71,9 +64,8 @@ Coding standards are checked and enforced using [Tighten's Duster package](https
 
 ## Security
 
-Our full security policy is available to read [here](https://github.com/AltThree/Segment/security/policy).
-
+Our security policy is available to read [here](https://github.com/AltThree/Segment/security/policy).
 
 ## License
 
-Alt Three Segment is licensed under [The MIT License (MIT)](LICENSE).
+This library is licensed under [The MIT License (MIT)](LICENSE).
