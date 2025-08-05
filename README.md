@@ -6,14 +6,22 @@
 
 This package is a [Segment](https://segment.com/) bridge for Laravel, which relies
 on [Segment's own PHP library](https://packagist.org/packages/segmentio/analytics-php). This version
-requires [PHP](https://php.net) 8.1 and up, and supports Laravel 9 – 10. This package was originally written by [Graham Campbell for Alt Three](https://github.com/AltThree/Segment), but was abandoned in April 2022. This fork was resurrected in April 2023 by [Marcus Bointon (@Synchro)](https://github.com/Synchro).
+requires [PHP](https://php.net) 8.2 and up, and supports Laravel 11 – 12. This package was originally written by [Graham Campbell for Alt Three](https://github.com/AltThree/Segment), but was abandoned in April 2022. This fork was resurrected in April 2023 by [Marcus Bointon (@Synchro)](https://github.com/Synchro).
 
 ## Installation
 
 Install the package using [Composer](https://getcomposer.org):
 
+Version 4.0 of this package supports Laravel 9 and 10, and requires PHP 8.1 or later.
+
 ```bash
 $ composer require synchro/segment:^4.0
+```
+
+Version 5.0 of this package supports Laravel 11 and 12, and requires PHP 8.2 or later.
+
+```bash
+$ composer require synchro/segment:^5.0
 ```
 
 Once installed, if you are not using automatic package discovery, then you need to register the  `Synchro\Segment\SegmentServiceProvider` service provider in your `config/app.php`.
