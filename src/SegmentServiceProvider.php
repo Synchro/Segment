@@ -37,7 +37,7 @@ class SegmentServiceProvider extends ServiceProvider
 
     protected function setupConfig(): void
     {
-        $source = realpath($raw = __DIR__ . '/../config/segment.php') ?: $raw;
+        $source = realpath($raw = __DIR__.'/../config/segment.php') ?: $raw;
 
         if ($this->app instanceof LaravelApplication && $this->app->runningInConsole()) {
             $this->publishes([$source => config_path('segment.php')]);

@@ -1,0 +1,33 @@
+name: Coding standards
+
+on:
+  push:
+    branches: [ main, develop ]
+  pull_request:
+
+jobs:
+  phplint:
+    runs-on: ubuntu-latest
+
+    permissions:
+      contents: write
+
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.head_ref }}
+
+      - name: "laravel-pint"
+        uses: aglipanci/laravel-pint-action@latest
+        with:
+          preset: laravel
+          verboseMode: true
+          pintVersion: 1.24.0
+          onlyDirty: true
+          onlyDiff: "main"
+
+      - uses: stefanzweifel/git-auto-commit-action@v4
+        with:
+          commit_message: Coding standards fixed by pint
+          commit_user_name: GitHub Action
+          commit_user_email: actions@github.com

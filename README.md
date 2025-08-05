@@ -64,7 +64,7 @@ Run tests with `./vendor.bin/phpunit` or `composer test`.
 
 ## Coding standards
 
-Coding standards are checked and enforced using [Tighten's Duster package](https://github.com/tighten/duster) using the default Laravel coding standard. Check for coding standards issues by running `./vendor/bin/duster lint`, and apply automatic fixes using `./vendor/bin/duster fix`, or `composer cs`. These checks are also run using GitHub actions.
+Coding standards are checked and enforced using [Laravel Pint](https://github.com/laravel/pint) using the default Laravel coding standard. Check for coding standards and apply automatic fixes by running `./vendor/bin/pint` or `composer cs`. These checks are also run using GitHub actions.
 
 ## Security
 
