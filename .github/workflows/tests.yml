@@ -7,15 +7,15 @@ on:
 jobs:
   tests:
     name: PHP ${{ matrix.php }}; Laravel ${{ matrix.laravel }}
-    runs-on: ubuntu-22.04
+    runs-on: ubuntu-24.04
 
     strategy:
       matrix:
-        php: ['8.1', '8.2']
-        laravel: ['9', '10']
+        php: ['8.2', '8.3', '8.4']
+        laravel: ['11', '12']
     steps:
       - name: Checkout Code
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
 
       - name: Setup PHP
         uses: shivammathur/setup-php@v2
@@ -27,21 +27,21 @@ jobs:
       - name: Setup Problem Matchers
         run: echo "::add-matcher::${{ runner.tool_cache }}/phpunit.json"
 
-      - name: Select Laravel 9
+      - name: Select Laravel 11
         uses: nick-invision/retry@v2
         with:
           timeout_minutes: 5
           max_attempts: 5
-          command: composer require "laravel/framework:9.*" "phpunit/phpunit:^9.5" --no-update --no-interaction
-        if: "matrix.laravel == '9'"
+          command: composer require "laravel/framework:11.*" "phpunit/phpunit:^11.0" --no-update --no-interaction
+        if: "matrix.laravel == '11'"
 
-      - name: Select Laravel 10
+      - name: Select Laravel 12
         uses: nick-invision/retry@v2
         with:
           timeout_minutes: 5
           max_attempts: 5
-          command: composer require "laravel/framework:10.*" "phpunit/phpunit:^10.0" --no-update --no-interaction
-        if: "matrix.laravel == '10'"
+          command: composer require "laravel/framework:11.*" "phpunit/phpunit:^11.0" --no-update --no-interaction
+        if: "matrix.laravel == '11'"
 
       - name: Install Dependencies
         uses: nick-invision/retry@v2
